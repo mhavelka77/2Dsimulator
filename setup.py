@@ -15,5 +15,5 @@ setup(
     author='Martin Havelka',
     author_email='mhavelka77@gmail.com',
     license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
+    packages=find_packages(exclude=('docs'))
 )

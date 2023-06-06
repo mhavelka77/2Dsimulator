@@ -5,7 +5,6 @@ import numpy as np
 import constants
 
 class Display:
-
     def __init__(self, terminal, time_constant):
         self.time_constant = time_constant
         if terminal:

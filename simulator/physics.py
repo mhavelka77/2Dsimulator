@@ -38,8 +38,7 @@ class Vector():
 
 def force_between_bodies(b1, b2):
     b1_to_b2 = b2.position - b1.position
-    distance = len(b1_to_b2) if len(b1_to_b2) != 0 else 1
+    distance = len(b1_to_b2) if len(b1_to_b2) != 0 else 0.5 # this is maybe too inaccurate
     normalized_b1_to_b2 = b1_to_b2 * (1 / distance)
-
     return normalized_b1_to_b2 * ((constants.GRAVITATIONAL_CONSTANT * b1.mass * b2.mass) / distance**2)
   

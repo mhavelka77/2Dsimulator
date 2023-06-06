@@ -1,6 +1,5 @@
 from simulation import Simulation
 
-
 def main():
     simulation = Simulation(0.1, terminal=False)
     simulation.add_body(mass=1e13, position=(0, 0))

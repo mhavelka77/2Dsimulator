@@ -26,14 +26,14 @@ class Simulation:
             acceleration = physics.Vector((0,0))
             for n in range(len(self.bodies)):
                 acceleration += physics.force_between_bodies(self.bodies[i], self.bodies[n])  
-            acceleration *= 1 / self.bodies[i].mass
+            acceleration /= self.bodies[i].mass
             self.bodies[i].acceleration = acceleration
-
 
     def draw(self):
         canvas = np.zeros((constants.CANVAS_SIZE, constants.CANVAS_SIZE), dtype=bool)
         xmax = canvas.shape[0]//2 
         ymax = canvas.shape[1]//2 
+
         if (constants.AXIS):
             canvas[xmax] = 1 
             canvas[:,ymax] = 1 
